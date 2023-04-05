@@ -1,0 +1,7 @@
+C:\Users\Admin\Desktop\Casino-Project\CasinoApp\CasinoWinForms\x64\Debug\CasinoWinForms.vcxproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Casino-Project\CasinoApp\CasinoWinForms\x64\Debug\CasinoWinForms.vcxproj.SuggestedBindingRedirects.cache
+C:\Users\Admin\Desktop\Casino-Project\CasinoApp\CasinoWinForms\x64\Debug\CasinoWinForms.headers.CasinoF.resources
+C:\Users\Admin\Desktop\Casino-Project\CasinoApp\CasinoWinForms\x64\Debug\CasinoWinForms.headers.CasinoMenu.resources
+C:\Users\Admin\Desktop\Casino-Project\CasinoApp\CasinoWinForms\x64\Debug\CasinoWinForms.headers.CreateGuestF.resources
+C:\Users\Admin\Desktop\Casino-Project\CasinoApp\CasinoWinForms\x64\Debug\CasinoWinForms.headers.GuestF.resources
+C:\Users\Admin\Desktop\Casino-Project\CasinoApp\CasinoWinForms\x64\Debug\CasinoWinForms.vcxproj.GenerateResource.cache
