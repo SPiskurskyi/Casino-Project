@@ -390,7 +390,7 @@ namespace CasinoWinForms {
 			this->Green_radioButton->Size = System::Drawing::Size(104, 20);
 			this->Green_radioButton->TabIndex = 9;
 			this->Green_radioButton->TabStop = true;
-			this->Green_radioButton->Text = L"GREEN(16x)";
+			this->Green_radioButton->Text = L"GREEN(32x)";
 			this->Green_radioButton->UseVisualStyleBackColor = true;
 			// 
 			// Black_radioButton

@@ -6,9 +6,12 @@
 
 using namespace System;
 using namespace System::Windows::Forms;
+using namespace System::Text::RegularExpressions;
+
 
 [STAThreadAttribute]
 int main(array<String^>^) {
+    
 	Application::SetCompatibleTextRenderingDefault(false);
 	Application::EnableVisualStyles();
 	CasinoWinForms::CasinoF form;
