@@ -1,6 +1,6 @@
 import React from 'react';
 
-function LogIn(){
+function LogIn(){ 
     return(
         <div className='log__in'>
             <h1 className='log__in__title'>Welcome Back.</h1>
