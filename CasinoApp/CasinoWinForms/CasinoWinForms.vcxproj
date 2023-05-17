@@ -140,6 +140,7 @@
     <ClInclude Include="headers\GuestF.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="headers\Validation.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
@@ -162,6 +163,7 @@
     <ClCompile Include="src\CreateGuestF.cpp" />
     <ClCompile Include="src\Funcs.cpp" />
     <ClCompile Include="src\GuestF.cpp" />
+    <ClCompile Include="src\Validation.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="CasinoWinForms.rc" />
