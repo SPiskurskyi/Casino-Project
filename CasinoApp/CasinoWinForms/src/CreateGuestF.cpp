@@ -1,5 +1,4 @@
 #include "../headers/CreateGuestF.h"
-#include "../headers/Funcs.h"
 
 Guest guest;
 

@@ -39,7 +39,8 @@ namespace CasinoWinForms {
 	private: System::Windows::Forms::MenuStrip^ menuStrip1;
 	protected:
 	private: System::Windows::Forms::ToolStripMenuItem^ exitToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ exitToTheCreateGuestMenuToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ exitToTheCasinoFToolStripMenuItem;
+
 	private: System::Windows::Forms::ToolStripMenuItem^ exitTheProgramToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ aboutToolStripMenuItem;
 	private: System::Windows::Forms::Button^ CheckInfo_button;
@@ -62,10 +63,9 @@ namespace CasinoWinForms {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(GuestF::typeid));
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->exitToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->exitToTheCreateGuestMenuToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->exitToTheCasinoFToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->exitTheProgramToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->aboutToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->CheckInfo_button = (gcnew System::Windows::Forms::Button());
@@ -75,44 +75,45 @@ namespace CasinoWinForms {
 			// 
 			// menuStrip1
 			// 
+			this->menuStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
 			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
 				this->exitToolStripMenuItem,
 					this->aboutToolStripMenuItem
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(484, 24);
+			this->menuStrip1->Size = System::Drawing::Size(645, 28);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
 			// exitToolStripMenuItem
 			// 
 			this->exitToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
-				this->exitToTheCreateGuestMenuToolStripMenuItem,
+				this->exitToTheCasinoFToolStripMenuItem,
 					this->exitTheProgramToolStripMenuItem
 			});
 			this->exitToolStripMenuItem->Name = L"exitToolStripMenuItem";
-			this->exitToolStripMenuItem->Size = System::Drawing::Size(38, 20);
+			this->exitToolStripMenuItem->Size = System::Drawing::Size(47, 24);
 			this->exitToolStripMenuItem->Text = L"Exit";
 			// 
-			// exitToTheCreateGuestMenuToolStripMenuItem
+			// exitToTheCasinoFToolStripMenuItem
 			// 
-			this->exitToTheCreateGuestMenuToolStripMenuItem->Name = L"exitToTheCreateGuestMenuToolStripMenuItem";
-			this->exitToTheCreateGuestMenuToolStripMenuItem->Size = System::Drawing::Size(234, 22);
-			this->exitToTheCreateGuestMenuToolStripMenuItem->Text = L"Back to the create guest menu";
-			this->exitToTheCreateGuestMenuToolStripMenuItem->Click += gcnew System::EventHandler(this, &GuestF::exitToTheCreateGuestMenuToolStripMenuItem_Click);
+			this->exitToTheCasinoFToolStripMenuItem->Name = L"exitToTheCasinoFToolStripMenuItem";
+			this->exitToTheCasinoFToolStripMenuItem->Size = System::Drawing::Size(244, 26);
+			this->exitToTheCasinoFToolStripMenuItem->Text = L"Back to the main menu";
+			this->exitToTheCasinoFToolStripMenuItem->Click += gcnew System::EventHandler(this, &GuestF::exitToTheCasinoFToolStripMenuItem_Click);
 			// 
 			// exitTheProgramToolStripMenuItem
 			// 
 			this->exitTheProgramToolStripMenuItem->Name = L"exitTheProgramToolStripMenuItem";
-			this->exitTheProgramToolStripMenuItem->Size = System::Drawing::Size(234, 22);
+			this->exitTheProgramToolStripMenuItem->Size = System::Drawing::Size(244, 26);
 			this->exitTheProgramToolStripMenuItem->Text = L"Exit the program";
 			this->exitTheProgramToolStripMenuItem->Click += gcnew System::EventHandler(this, &GuestF::exitTheProgramToolStripMenuItem_Click);
 			// 
 			// aboutToolStripMenuItem
 			// 
 			this->aboutToolStripMenuItem->Name = L"aboutToolStripMenuItem";
-			this->aboutToolStripMenuItem->Size = System::Drawing::Size(61, 20);
+			this->aboutToolStripMenuItem->Size = System::Drawing::Size(73, 24);
 			this->aboutToolStripMenuItem->Text = L"About...";
 			this->aboutToolStripMenuItem->Click += gcnew System::EventHandler(this, &GuestF::aboutToolStripMenuItem_Click);
 			// 
@@ -120,9 +121,10 @@ namespace CasinoWinForms {
 			// 
 			this->CheckInfo_button->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->CheckInfo_button->Location = System::Drawing::Point(115, 134);
+			this->CheckInfo_button->Location = System::Drawing::Point(153, 165);
+			this->CheckInfo_button->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->CheckInfo_button->Name = L"CheckInfo_button";
-			this->CheckInfo_button->Size = System::Drawing::Size(268, 50);
+			this->CheckInfo_button->Size = System::Drawing::Size(357, 62);
 			this->CheckInfo_button->TabIndex = 3;
 			this->CheckInfo_button->Text = L"Check guest status\r\n";
 			this->CheckInfo_button->UseVisualStyleBackColor = true;
@@ -132,9 +134,10 @@ namespace CasinoWinForms {
 			// 
 			this->GoCasino_button->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->GoCasino_button->Location = System::Drawing::Point(115, 236);
+			this->GoCasino_button->Location = System::Drawing::Point(153, 290);
+			this->GoCasino_button->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->GoCasino_button->Name = L"GoCasino_button";
-			this->GoCasino_button->Size = System::Drawing::Size(268, 50);
+			this->GoCasino_button->Size = System::Drawing::Size(357, 62);
 			this->GoCasino_button->TabIndex = 4;
 			this->GoCasino_button->Text = L"Go to the casino";
 			this->GoCasino_button->UseVisualStyleBackColor = true;
@@ -142,14 +145,15 @@ namespace CasinoWinForms {
 			// 
 			// GuestF
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(484, 461);
+			this->ClientSize = System::Drawing::Size(645, 567);
 			this->Controls->Add(this->GoCasino_button);
 			this->Controls->Add(this->CheckInfo_button);
 			this->Controls->Add(this->menuStrip1);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::Fixed3D;
 			this->MainMenuStrip = this->menuStrip1;
+			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->MaximizeBox = false;
 			this->Name = L"GuestF";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
@@ -164,7 +168,7 @@ namespace CasinoWinForms {
 	private: System::Void aboutToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) { MessageBox::Show(this, "Casino WinForms version\nGIT: https://github.com/Zeerhiy\nE-MAIL: igressikk@gmail.com", "Info", MessageBoxButtons::OK, MessageBoxIcon::Information); }
 	private: System::Void GoCasino_button_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void exitTheProgramToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) { Application::Exit(); }
-	private: System::Void exitToTheCreateGuestMenuToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void exitToTheCasinoFToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void CheckInfo_button_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }

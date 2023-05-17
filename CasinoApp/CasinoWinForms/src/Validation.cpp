@@ -4,7 +4,7 @@ const static std::regex r_email(
 	"([\\w][\\w-\.]+)"
 	"(@)"
 	"([\\w-]+)"
-	"(\.)"
+	"(\\.)"
 	"([a-z]{2,5})");
 
 bool ValidateEmail(const std::string input, std::vector<std::string> outputVector){

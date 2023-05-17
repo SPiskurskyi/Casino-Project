@@ -19,9 +19,9 @@ System::Void CasinoWinForms::GuestF::GoCasino_button_Click(System::Object^ sende
 	}
 }
 
-System::Void CasinoWinForms::GuestF::exitToTheCreateGuestMenuToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
+System::Void CasinoWinForms::GuestF::exitToTheCasinoFToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	CreateGuestF^ form = gcnew CreateGuestF();
+	CasinoF^ form = gcnew CasinoF();
 	this->Hide();
 	form->Show();
 }

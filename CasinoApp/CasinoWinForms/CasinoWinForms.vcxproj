@@ -79,6 +79,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <AdditionalDependencies />
@@ -112,6 +113,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <AdditionalDependencies />
@@ -140,6 +142,9 @@
     <ClInclude Include="headers\GuestF.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="headers\LogInF.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="headers\Validation.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
@@ -156,6 +161,9 @@
     <EmbeddedResource Include="headers\GuestF.resx">
       <DependentUpon>headers\GuestF.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="headers\LogInF.resx">
+      <DependentUpon>headers\LogInF.h</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\CasinoF.cpp" />
@@ -163,6 +171,7 @@
     <ClCompile Include="src\CreateGuestF.cpp" />
     <ClCompile Include="src\Funcs.cpp" />
     <ClCompile Include="src\GuestF.cpp" />
+    <ClCompile Include="src\LogInF.cpp" />
     <ClCompile Include="src\Validation.cpp" />
   </ItemGroup>
   <ItemGroup>
