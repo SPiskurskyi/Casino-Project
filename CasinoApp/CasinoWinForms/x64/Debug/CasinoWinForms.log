@@ -1,13 +1,2 @@
-﻿  CasinoF.cpp
-  CasinoMenu.cpp
-C:\Users\Admin\Desktop\Casino-Project\CasinoApp\CasinoWinForms\src\CasinoMenu.cpp(28,25): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Admin\Desktop\Casino-Project\CasinoApp\CasinoWinForms\src\CasinoMenu.cpp(50,25): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Admin\Desktop\Casino-Project\CasinoApp\CasinoWinForms\src\CasinoMenu.cpp(73,25): warning C4018: '<': signed/unsigned mismatch
-  CreateGuestF.cpp
-  Funcs.cpp
-  GuestF.cpp
-  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
-  Generating Code...
-C:\Users\Admin\Desktop\Casino-Project\CasinoApp\CasinoWinForms\src\Funcs.cpp(28): warning C4172: returning address of local variable or temporary: os
-  CasinoF.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-  CasinoWinForms.vcxproj -> C:\Users\Admin\Desktop\Casino-Project\CasinoApp\x64\Debug\CasinoWinForms.exe
+﻿  CasinoF.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  CasinoWinForms.vcxproj -> C:\Users\Admin\Desktop\Projects\Casino-Project\CasinoApp\x64\Debug\CasinoWinForms.exe

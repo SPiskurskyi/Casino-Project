@@ -89,9 +89,9 @@ System::Void CasinoWinForms::CasinoMenu::Bet_button_Click(System::Object^ sender
 		WinningLot_label->ForeColor = Color::ForestGreen;
 		if (Green_radioButton->Checked)
 		{
-			guest.AddGuestTokens(temp_int * 16);
+			guest.AddGuestTokens(temp_int * 32);
 			UpdateInfo();
-			MessageBox::Show("You won " + Convert::ToString(temp_int*16) + " TOKENS!!CONGRATZ", "GREEEEEEEEN", MessageBoxButtons::OK, MessageBoxIcon::Information);
+			MessageBox::Show("You won " + Convert::ToString(temp_int*32) + " TOKENS!!CONGRATZ", "GREEEEEEEEN", MessageBoxButtons::OK, MessageBoxIcon::Information);
 		}
 		else {
 			guest.SubGuestTokens(temp_int);
