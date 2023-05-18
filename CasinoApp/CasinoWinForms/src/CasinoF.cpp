@@ -28,7 +28,5 @@ System::Void CasinoWinForms::CasinoF::Login_button_Click(System::Object^ sender,
 
 System::Void CasinoWinForms::CasinoF::Signup_button_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	CreateGuestF^ form = gcnew CreateGuestF();
-	this->Hide();
-	form->Show();
+	
 }

@@ -21,6 +21,9 @@ System::Void CasinoWinForms::LogInF::LogIn_button_Click(System::Object^ sender, 
 	}
 
 	if (ValidateEmail(email, DataOutput) && ValidatePassword(password, DataOutput)) {
+		
+		guest.SetGuestEmail(email);
+		guest.SetGuestPassword(password);
 		GuestF^ form = gcnew GuestF();
 		this->Hide();
 		form->Show();

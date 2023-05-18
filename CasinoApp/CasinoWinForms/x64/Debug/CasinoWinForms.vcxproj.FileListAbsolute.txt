@@ -9,7 +9,6 @@ C:\Users\Admin\Desktop\Projects\Casino-Project\CasinoApp\CasinoWinForms\x64\Debu
 C:\Users\Admin\Desktop\Projects\Casino-Project\CasinoApp\CasinoWinForms\x64\Debug\CasinoWinForms.vcxproj.SuggestedBindingRedirects.cache
 C:\Users\Admin\Desktop\Projects\Casino-Project\CasinoApp\CasinoWinForms\x64\Debug\CasinoWinForms.headers.CasinoF.resources
 C:\Users\Admin\Desktop\Projects\Casino-Project\CasinoApp\CasinoWinForms\x64\Debug\CasinoWinForms.headers.CasinoMenu.resources
-C:\Users\Admin\Desktop\Projects\Casino-Project\CasinoApp\CasinoWinForms\x64\Debug\CasinoWinForms.headers.CreateGuestF.resources
 C:\Users\Admin\Desktop\Projects\Casino-Project\CasinoApp\CasinoWinForms\x64\Debug\CasinoWinForms.headers.GuestF.resources
-C:\Users\Admin\Desktop\Projects\Casino-Project\CasinoApp\CasinoWinForms\x64\Debug\CasinoWinForms.vcxproj.GenerateResource.cache
 C:\Users\Admin\Desktop\Projects\Casino-Project\CasinoApp\CasinoWinForms\x64\Debug\CasinoWinForms.headers.LogInF.resources
+C:\Users\Admin\Desktop\Projects\Casino-Project\CasinoApp\CasinoWinForms\x64\Debug\CasinoWinForms.vcxproj.GenerateResource.cache

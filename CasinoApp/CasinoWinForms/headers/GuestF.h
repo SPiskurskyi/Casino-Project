@@ -1,6 +1,8 @@
 #pragma once
 #include "CasinoMenu.h"
 #include "Funcs.h"
+#include "CasinoF.h"
+
 
 namespace CasinoWinForms {
 

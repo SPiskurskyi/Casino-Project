@@ -1,10 +1,10 @@
 #pragma once
 #include "Validation.h"
-#include "CreateGuestF.h"
 #include "Funcs.h"
 #include "LogInF.h"
 
 inline std::vector<std::string> DataOutput;
+inline Guest guest;
 
 namespace CasinoWinForms {
 
