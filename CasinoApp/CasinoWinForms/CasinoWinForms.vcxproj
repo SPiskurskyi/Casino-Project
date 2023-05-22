@@ -142,8 +142,11 @@
     <ClInclude Include="headers\LogInF.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="headers\resource.h" />
+    <ClInclude Include="headers\SignUpF.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="headers\Validation.h" />
-    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="headers\CasinoF.resx">
@@ -158,6 +161,9 @@
     <EmbeddedResource Include="headers\LogInF.resx">
       <DependentUpon>headers\LogInF.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="headers\SignUpF.resx">
+      <DependentUpon>headers\SignUpF.h</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\CasinoF.cpp" />
@@ -165,6 +171,7 @@
     <ClCompile Include="src\Funcs.cpp" />
     <ClCompile Include="src\GuestF.cpp" />
     <ClCompile Include="src\LogInF.cpp" />
+    <ClCompile Include="src\SignUpF.cpp" />
     <ClCompile Include="src\Validation.cpp" />
   </ItemGroup>
   <ItemGroup>

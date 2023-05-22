@@ -27,14 +27,17 @@
     <ClInclude Include="headers\Funcs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="headers\Validation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="headers\LogInF.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\SignUpF.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\resource.h">
+      <Filter>Resource Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -54,6 +57,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\LogInF.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SignUpF.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

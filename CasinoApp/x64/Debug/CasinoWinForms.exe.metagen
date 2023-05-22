@@ -2,6 +2,7 @@
   CasinoWinForms.headers.CasinoMenu.resources - Embedded, ContainedInManifestFile, 
   CasinoWinForms.headers.GuestF.resources - Embedded, ContainedInManifestFile, 
   CasinoWinForms.headers.LogInF.resources - Embedded, ContainedInManifestFile, 
+  CasinoWinForms.headers.SignUpF.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
 Assembly CasinoWinForms, Version=0.0.*, Culture=Invariant Language (Invariant Country): 
 	hash=SHA1, flags=PublicKey
@@ -24,6 +25,9 @@ Class CasinoWinForms.GuestF: AutoLayout, AnsiClass, Class, Public, BeforeFieldIn
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class CasinoWinForms.LogInF: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class CasinoWinForms.SignUpF: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class CasinoWinForms.CasinoF: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit

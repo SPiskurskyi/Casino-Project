@@ -167,7 +167,7 @@ namespace CasinoWinForms {
 
 		}
 #pragma endregion
-	private: System::Void aboutToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) { MessageBox::Show(this, "Casino WinForms version\nGIT: https://github.com/Zeerhiy\nE-MAIL: igressikk@gmail.com", "Info", MessageBoxButtons::OK, MessageBoxIcon::Information); }
+	private: System::Void aboutToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) { MessageBox::Show(this, "BLACK GUN CASINO\nDETAILS: https://github.com/Zeerhiy/Casino-Project\n(c) SIGMAS", "Info", MessageBoxButtons::OK, MessageBoxIcon::Information); }
 	private: System::Void GoCasino_button_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void exitTheProgramToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) { Application::Exit(); }
 	private: System::Void exitToTheCasinoFToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
