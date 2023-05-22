@@ -18,20 +18,31 @@ char* Convert_String_to_char(System::String^ string);
 //GUEST CLASS/
 class Guest {
 private:
-	std::string name = "";
+	std::string email = "";
+	std::string password = "";
+	std::string first_name = "";
+	std::string last_name = "";
 	int age = 0;
 	int cash = 0;
 	int tokens = 0;
 public:
 	Guest() {};
-	void SetGuestName(std::string name);
+	void SetGuestEmail(std::string name);
+	void SetGuestPassword(std::string name);
+	void SetGuestFirst_name(std::string name);
+	void SetGuestLast_name(std::string name);
 	void SetGuestAge(int age);
 	void SetGuestCash(int cash);
 	void SetGuestTokens(int tokens);
-	std::string GetGuestName();
+
+	std::string GetGuestEmail();
+	std::string GetGuestPassword();
+	std::string GetGuestFirst_name();
+	std::string GetGuestLast_name();
 	int GetGuestAge();
 	int GetGuestCash();
 	int GetGuestTokens();
+
 	void AddGuestTokens(int tokens);
 	void SubGuestTokens(int tokens);
 };

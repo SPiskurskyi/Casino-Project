@@ -21,12 +21,15 @@ System::Void CasinoWinForms::LogInF::LogIn_button_Click(System::Object^ sender, 
 	}
 
 	if (ValidateEmail(email, DataOutput) && ValidatePassword(password, DataOutput)) {
+		
+		guest.SetGuestEmail(email);
+		guest.SetGuestPassword(password);
 		GuestF^ form = gcnew GuestF();
 		this->Hide();
 		form->Show();
 	}
 	else {
-		MessageBox::Show("\tInvalid email or password. \n\nPasswords must be at least 7 characters long,\nmust contains one Upper case letter and one digit.", "Warning", MessageBoxButtons::OK, MessageBoxIcon::Warning);
+		MessageBox::Show("\tInvalid email or password. \n\nPasswords must be at least 7 characters long,\nmust contains one upper case letter and one digit.", "Warning", MessageBoxButtons::OK, MessageBoxIcon::Warning);
 		return;
 	}
 }

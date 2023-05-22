@@ -57,10 +57,23 @@ System::String^ Convert_char_to_String(char* ch) {
 	return str;
 }
 
-//GUEST CLASS//
-void Guest::SetGuestName(std::string name)
+//----------------------------------GUEST CLASS----------------------------------//
+//SETTERS
+void Guest::SetGuestEmail(std::string email)
 {
-	this->name = name;
+	this->email = email;
+}
+void Guest::SetGuestPassword(std::string password)
+{
+	this->password = password;
+}
+void Guest::SetGuestFirst_name(std::string first_name)
+{
+	this->first_name = first_name;
+}
+void Guest::SetGuestLast_name(std::string last_name)
+{
+	this->last_name = last_name;
 }
 void Guest::SetGuestAge(int age)
 {
@@ -74,9 +87,23 @@ void Guest::SetGuestTokens(int tokens)
 {
 	this->tokens = tokens;
 }
-std::string Guest::GetGuestName()
+
+//GETTERS
+std::string Guest::GetGuestLast_name()
 {
-	return this->name;
+	return this->last_name;
+}
+std::string Guest::GetGuestFirst_name()
+{
+	return this->first_name;
+}
+std::string Guest::GetGuestEmail()
+{
+	return this->email;
+}
+std::string Guest::GetGuestPassword()
+{
+	return this->password;
 }
 int Guest::GetGuestAge()
 {
@@ -91,6 +118,7 @@ int Guest::GetGuestTokens()
 	return this->tokens;
 }
 
+//OTHER FUNCS
 void Guest::AddGuestTokens(int tokens)
 {
 	 this->tokens += tokens;

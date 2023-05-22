@@ -1,10 +1,11 @@
 #pragma once
 #include "Validation.h"
-#include "CreateGuestF.h"
 #include "Funcs.h"
 #include "LogInF.h"
+#include "SignUpF.h"
 
 inline std::vector<std::string> DataOutput;
+inline Guest guest;
 
 namespace CasinoWinForms {
 
@@ -83,9 +84,9 @@ namespace CasinoWinForms {
 			// 
 			// Login_button
 			// 
-			this->Login_button->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 26, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->Login_button->Font = (gcnew System::Drawing::Font(L"Times New Roman", 25.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->Login_button->Location = System::Drawing::Point(200, 232);
+			this->Login_button->Location = System::Drawing::Point(200, 248);
 			this->Login_button->Margin = System::Windows::Forms::Padding(4);
 			this->Login_button->Name = L"Login_button";
 			this->Login_button->Size = System::Drawing::Size(267, 62);
@@ -97,27 +98,28 @@ namespace CasinoWinForms {
 			// StartMenu_label
 			// 
 			this->StartMenu_label->AutoSize = true;
-			this->StartMenu_label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 48, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->StartMenu_label->Font = (gcnew System::Drawing::Font(L"Times New Roman", 48, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->StartMenu_label->ForeColor = System::Drawing::Color::Black;
-			this->StartMenu_label->Location = System::Drawing::Point(88, 86);
+			this->StartMenu_label->Location = System::Drawing::Point(89, 118);
 			this->StartMenu_label->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->StartMenu_label->Name = L"StartMenu_label";
-			this->StartMenu_label->Size = System::Drawing::Size(499, 91);
+			this->StartMenu_label->Size = System::Drawing::Size(501, 90);
 			this->StartMenu_label->TabIndex = 1;
 			this->StartMenu_label->Text = L"BLACK GUN";
 			// 
 			// Exit_button
 			// 
-			this->Exit_button->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 26, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->Exit_button->BackColor = System::Drawing::Color::Brown;
+			this->Exit_button->Font = (gcnew System::Drawing::Font(L"Times New Roman", 25.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->Exit_button->Location = System::Drawing::Point(200, 453);
+			this->Exit_button->Location = System::Drawing::Point(200, 478);
 			this->Exit_button->Margin = System::Windows::Forms::Padding(4);
 			this->Exit_button->Name = L"Exit_button";
 			this->Exit_button->Size = System::Drawing::Size(267, 62);
 			this->Exit_button->TabIndex = 2;
 			this->Exit_button->Text = L"EXIT";
-			this->Exit_button->UseVisualStyleBackColor = true;
+			this->Exit_button->UseVisualStyleBackColor = false;
 			this->Exit_button->Click += gcnew System::EventHandler(this, &CasinoF::Exit_button_Click);
 			// 
 			// menuStrip1
@@ -139,9 +141,9 @@ namespace CasinoWinForms {
 			// 
 			// Signup_button
 			// 
-			this->Signup_button->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 26, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->Signup_button->Font = (gcnew System::Drawing::Font(L"Times New Roman", 25.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->Signup_button->Location = System::Drawing::Point(200, 329);
+			this->Signup_button->Location = System::Drawing::Point(200, 341);
 			this->Signup_button->Margin = System::Windows::Forms::Padding(4);
 			this->Signup_button->Name = L"Signup_button";
 			this->Signup_button->Size = System::Drawing::Size(267, 62);
@@ -178,7 +180,7 @@ namespace CasinoWinForms {
 #pragma endregion
 	private: System::Void Login_button_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void Exit_button_Click(System::Object^ sender, System::EventArgs^ e) { Application::Exit(); }
-	private: System::Void aboutToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {MessageBox::Show(this, "Casino WinForms version\nGIT: https://github.com/Zeerhiy\nE-MAIL: igressikk@gmail.com", "Info", MessageBoxButtons::OK, MessageBoxIcon::Information);}
+	private: System::Void aboutToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {MessageBox::Show(this, "BLACK GUN CASINO\nDETAILS: https://github.com/Zeerhiy/Casino-Project\n(c) SIGMAS", "Info", MessageBoxButtons::OK, MessageBoxIcon::Information);}
 	private: System::Void Signup_button_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }
