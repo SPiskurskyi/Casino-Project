@@ -24,7 +24,7 @@ System::Void CasinoWinForms::LogInF::LogIn_button_Click(System::Object^ sender, 
 		
 		guest.SetGuestEmail(email);
 		guest.SetGuestPassword(password);
-		GuestF^ form = gcnew GuestF();
+		CasinoMenu^ form = gcnew CasinoMenu();
 		this->Hide();
 		form->Show();
 	}

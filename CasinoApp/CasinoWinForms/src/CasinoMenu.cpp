@@ -9,9 +9,9 @@ void CasinoWinForms::CasinoMenu::UpdateInfo()
 }
 
 
-System::Void CasinoWinForms::CasinoMenu::backToTheGuestMenuToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
+System::Void CasinoWinForms::CasinoMenu::backToTheMainMenuToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	GuestF^ form = gcnew GuestF();
+	CasinoF^ form = gcnew CasinoF();
 	this->Hide();
 	form->Show();
 }
@@ -134,4 +134,9 @@ System::Void CasinoWinForms::CasinoMenu::Bet_button_Click(System::Object^ sender
 		}
 	}
 
+}
+
+System::Void CasinoWinForms::CasinoMenu::userInfoToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	{ MessageBox::Show(Convert_string_to_String("Name: " + guest.GetGuestName() + "\nSurname: " + guest.GetGuestSurname() + "\nAge: " + std::to_string(guest.GetGuestAge()) + "\nEmail: " + guest.GetGuestEmail()), "Name info", MessageBoxButtons::OK, MessageBoxIcon::Information); }
 }
