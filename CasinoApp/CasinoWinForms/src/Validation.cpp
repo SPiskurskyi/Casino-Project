@@ -7,18 +7,19 @@ const static std::regex r_email(
 	"(\\.)"
 	"([a-z]{2,5})");
 
-bool ValidateEmail(const std::string input, std::vector<std::string> outputVector){
+const static std::regex r_names("[A-Za-z]+");
+
+bool ValidateEmail(const std::string& input){
 
 	std::cmatch result;
 	if (std::regex_match(input.c_str(), result, r_email)) {
-		outputVector.push_back(input);
 		return true;
 	}
 	else return false;
 
 }
 
-bool ValidatePassword(const std::string input, std::vector<std::string> outputVector) {
+bool ValidatePassword(const std::string& input) {
 
     bool upper_case = false;
     bool lower_case = false;
@@ -46,9 +47,33 @@ bool ValidatePassword(const std::string input, std::vector<std::string> outputVe
             return false;
         }
         else { 
-            outputVector.push_back(input);
             return true;
         }
 
     }
 }
+
+bool ValidateName(const std::string& input)
+{
+    std::cmatch result;
+    if (std::regex_match(input.c_str(), result, r_names)) {
+        return true;
+    }
+    else return false;
+}
+
+bool ValidateSurname(const std::string& input)
+{
+    std::cmatch result;
+    if (std::regex_match(input.c_str(), result, r_names)) {
+        return true;
+    }
+    else return false;
+}
+
+bool ValidateAge(const int input)
+{
+    return input > 18;
+}
+
+

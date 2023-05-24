@@ -23,22 +23,22 @@ private:
 	std::string first_name = "";
 	std::string last_name = "";
 	int age = 0;
-	int cash = 0;
+	int cash = 1000;
 	int tokens = 0;
 public:
 	Guest() {};
 	void SetGuestEmail(std::string name);
 	void SetGuestPassword(std::string name);
-	void SetGuestFirst_name(std::string name);
-	void SetGuestLast_name(std::string name);
+	void SetGuestName(std::string name);
+	void SetGuestSurname(std::string name);
 	void SetGuestAge(int age);
 	void SetGuestCash(int cash);
 	void SetGuestTokens(int tokens);
 
 	std::string GetGuestEmail();
 	std::string GetGuestPassword();
-	std::string GetGuestFirst_name();
-	std::string GetGuestLast_name();
+	std::string GetGuestName();
+	std::string GetGuestSurname();
 	int GetGuestAge();
 	int GetGuestCash();
 	int GetGuestTokens();

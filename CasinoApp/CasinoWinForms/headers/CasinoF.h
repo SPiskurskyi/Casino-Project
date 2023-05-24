@@ -4,7 +4,7 @@
 #include "LogInF.h"
 #include "SignUpF.h"
 
-inline std::vector<std::string> DataOutput;
+//inline std::vector<Guest> DataOutput;
 inline Guest guest;
 
 namespace CasinoWinForms {

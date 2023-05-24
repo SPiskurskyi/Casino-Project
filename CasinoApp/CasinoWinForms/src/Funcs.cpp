@@ -67,11 +67,11 @@ void Guest::SetGuestPassword(std::string password)
 {
 	this->password = password;
 }
-void Guest::SetGuestFirst_name(std::string first_name)
+void Guest::SetGuestName(std::string first_name)
 {
 	this->first_name = first_name;
 }
-void Guest::SetGuestLast_name(std::string last_name)
+void Guest::SetGuestSurname(std::string last_name)
 {
 	this->last_name = last_name;
 }
@@ -89,11 +89,11 @@ void Guest::SetGuestTokens(int tokens)
 }
 
 //GETTERS
-std::string Guest::GetGuestLast_name()
+std::string Guest::GetGuestName()
 {
 	return this->last_name;
 }
-std::string Guest::GetGuestFirst_name()
+std::string Guest::GetGuestSurname()
 {
 	return this->first_name;
 }
