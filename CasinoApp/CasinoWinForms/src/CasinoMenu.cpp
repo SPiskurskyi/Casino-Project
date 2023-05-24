@@ -1,6 +1,6 @@
 #include "../headers/CasinoMenu.h"
 
-extern Guest guest;
+
 
 void CasinoWinForms::CasinoMenu::UpdateInfo()
 {
@@ -68,6 +68,7 @@ System::Void CasinoWinForms::CasinoMenu::TokensToCash_button_Click(System::Objec
 
 System::Void CasinoWinForms::CasinoMenu::Bet_button_Click(System::Object^ sender, System::EventArgs^ e)
 {
+	srand(time(NULL));
 	int winlot = rand() % 37;
 	int temp_int = 0;
 	for (unsigned i = 0; i < Bet_textBox->TextLength; i++)
@@ -89,9 +90,11 @@ System::Void CasinoWinForms::CasinoMenu::Bet_button_Click(System::Object^ sender
 		WinningLot_label->ForeColor = Color::ForestGreen;
 		if (Green_radioButton->Checked)
 		{
+			System::Media::SoundPlayer^ simpleSound = gcnew System::Media::SoundPlayer("..\\CasinoWinForms\\src\\sounds\\green_effect.wav");
+			simpleSound->Play();
 			guest.AddGuestTokens(temp_int * 32);
 			UpdateInfo();
-			MessageBox::Show("You won " + Convert::ToString(temp_int*32) + " TOKENS!!CONGRATZ", "GREEEEEEEEN", MessageBoxButtons::OK, MessageBoxIcon::Information);
+			MessageBox::Show("You won " + Convert::ToString(temp_int*32) + " TOKENS!!CONGRATZ", "GREEEEEEEEN", MessageBoxButtons::OK, MessageBoxIcon::None);
 		}
 		else {
 			guest.SubGuestTokens(temp_int);
@@ -106,9 +109,11 @@ System::Void CasinoWinForms::CasinoMenu::Bet_button_Click(System::Object^ sender
 		WinningLot_label->ForeColor = Color::DarkRed;
 		if (Red_radioButton->Checked)
 		{
+			System::Media::SoundPlayer^ simpleSound = gcnew System::Media::SoundPlayer("..\\CasinoWinForms\\src\\sounds\\default_win_effect.wav");
+			simpleSound->Play();
 			guest.AddGuestTokens(temp_int * 2);
 			UpdateInfo();
-			MessageBox::Show("You won " + Convert::ToString(temp_int*2) + " tokens!", "Red", MessageBoxButtons::OK, MessageBoxIcon::Information);
+			MessageBox::Show("You won " + Convert::ToString(temp_int*2) + " tokens!", "Red", MessageBoxButtons::OK, MessageBoxIcon::None);
 		}
 		else {
 			guest.SubGuestTokens(temp_int);
@@ -123,9 +128,11 @@ System::Void CasinoWinForms::CasinoMenu::Bet_button_Click(System::Object^ sender
 		WinningLot_label->ForeColor = Color::Black;
 		if (Black_radioButton->Checked)
 		{
+			System::Media::SoundPlayer^ simpleSound = gcnew System::Media::SoundPlayer("src\\sounds\\default_win_effect.wav");
+			simpleSound->Play();
 			guest.AddGuestTokens(temp_int * 2);
 			UpdateInfo();
-			MessageBox::Show("You won " + Convert::ToString(temp_int*2) + " tokens!", "Black", MessageBoxButtons::OK, MessageBoxIcon::Information);
+			MessageBox::Show("You won " + Convert::ToString(temp_int*2) + " tokens!", "Black", MessageBoxButtons::OK, MessageBoxIcon::None);
 		}
 		else {
 			guest.SubGuestTokens(temp_int);

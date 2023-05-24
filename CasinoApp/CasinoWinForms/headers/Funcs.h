@@ -4,6 +4,8 @@
 #include <string>
 #include <ctime>
 
+
+
 using namespace System;
 using namespace System::Windows::Forms;
 
@@ -24,7 +26,7 @@ private:
 	std::string last_name = "";
 	int age = 0;
 	int cash = 1000;
-	int tokens = 0;
+	int tokens = 1000;
 public:
 	Guest() {};
 	void SetGuestEmail(std::string name);

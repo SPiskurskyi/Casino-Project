@@ -12,10 +12,9 @@ int main(array<String^>^) {
     
 	Application::SetCompatibleTextRenderingDefault(false);
 	Application::EnableVisualStyles();
-	CasinoWinForms::CasinoF form;
+	CasinoWinForms::CasinoMenu form;
 	Application::Run(% form);
 	
-
 }
 
 System::Void CasinoWinForms::CasinoF::Login_button_Click(System::Object^ sender, System::EventArgs^ e)
