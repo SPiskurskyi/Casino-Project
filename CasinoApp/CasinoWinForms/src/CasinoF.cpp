@@ -12,7 +12,7 @@ int main(array<String^>^) {
     
 	Application::SetCompatibleTextRenderingDefault(false);
 	Application::EnableVisualStyles();
-	CasinoWinForms::CasinoMenu form;
+	CasinoWinForms::CasinoF form;
 	Application::Run(% form);
 	
 }

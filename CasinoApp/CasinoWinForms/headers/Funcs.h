@@ -26,7 +26,7 @@ private:
 	std::string last_name = "";
 	int age = 0;
 	int cash = 1000;
-	int tokens = 1000;
+	int tokens = 0;
 public:
 	Guest() {};
 	void SetGuestEmail(std::string name);
