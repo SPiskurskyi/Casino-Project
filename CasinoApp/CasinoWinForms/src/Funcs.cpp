@@ -91,11 +91,11 @@ void Guest::SetGuestTokens(int tokens)
 //GETTERS
 std::string Guest::GetGuestName()
 {
-	return this->last_name;
+	return this->first_name;
 }
 std::string Guest::GetGuestSurname()
 {
-	return this->first_name;
+	return this->last_name;
 }
 std::string Guest::GetGuestEmail()
 {
