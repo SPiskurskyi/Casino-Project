@@ -2,6 +2,7 @@
 #include "CasinoF.h"
 #include "Funcs.h"
 
+
 namespace CasinoWinForms {
 
 	using namespace System;
@@ -39,9 +40,12 @@ namespace CasinoWinForms {
 	private: System::Windows::Forms::MenuStrip^ menuStrip1;
 	protected:
 	private: System::Windows::Forms::ToolStripMenuItem^ exitToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ backToTheGuestMenuToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ backToTheMainMenuToolStripMenuItem;
+
 	private: System::Windows::Forms::ToolStripMenuItem^ exitTheProgramToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ aboutToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ userInfoToolStripMenuItem;
+
+
 	private: System::Windows::Forms::GroupBox^ Info_groupBox;
 	private: System::Windows::Forms::Label^ Cash_label2;
 	private: System::Windows::Forms::Label^ Tokens_label1;
@@ -69,6 +73,7 @@ namespace CasinoWinForms {
 	private: System::Windows::Forms::Label^ WinningLot_label;
 	private: System::Windows::Forms::Label^ WinningLotText_label;
 	private: System::Windows::Forms::Button^ Bet_button;
+	private: System::Windows::Forms::ToolStripMenuItem^ aboutToolStripMenuItem;
 
 
 
@@ -88,8 +93,9 @@ namespace CasinoWinForms {
 		{
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->exitToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->backToTheGuestMenuToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->backToTheMainMenuToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->exitTheProgramToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->userInfoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->aboutToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->Info_groupBox = (gcnew System::Windows::Forms::GroupBox());
 			this->Cash_label2 = (gcnew System::Windows::Forms::Label());
@@ -123,9 +129,9 @@ namespace CasinoWinForms {
 			// menuStrip1
 			// 
 			this->menuStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
-			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
 				this->exitToolStripMenuItem,
-					this->aboutToolStripMenuItem
+					this->userInfoToolStripMenuItem, this->aboutToolStripMenuItem
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
@@ -136,26 +142,33 @@ namespace CasinoWinForms {
 			// exitToolStripMenuItem
 			// 
 			this->exitToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
-				this->backToTheGuestMenuToolStripMenuItem,
+				this->backToTheMainMenuToolStripMenuItem,
 					this->exitTheProgramToolStripMenuItem
 			});
 			this->exitToolStripMenuItem->Name = L"exitToolStripMenuItem";
 			this->exitToolStripMenuItem->Size = System::Drawing::Size(47, 24);
 			this->exitToolStripMenuItem->Text = L"Exit";
 			// 
-			// backToTheGuestMenuToolStripMenuItem
+			// backToTheMainMenuToolStripMenuItem
 			// 
-			this->backToTheGuestMenuToolStripMenuItem->Name = L"backToTheGuestMenuToolStripMenuItem";
-			this->backToTheGuestMenuToolStripMenuItem->Size = System::Drawing::Size(247, 26);
-			this->backToTheGuestMenuToolStripMenuItem->Text = L"Back to the guest menu";
-			this->backToTheGuestMenuToolStripMenuItem->Click += gcnew System::EventHandler(this, &CasinoMenu::backToTheGuestMenuToolStripMenuItem_Click);
+			this->backToTheMainMenuToolStripMenuItem->Name = L"backToTheMainMenuToolStripMenuItem";
+			this->backToTheMainMenuToolStripMenuItem->Size = System::Drawing::Size(224, 26);
+			this->backToTheMainMenuToolStripMenuItem->Text = L"Back to main menu";
+			this->backToTheMainMenuToolStripMenuItem->Click += gcnew System::EventHandler(this, &CasinoMenu::backToTheMainMenuToolStripMenuItem_Click);
 			// 
 			// exitTheProgramToolStripMenuItem
 			// 
 			this->exitTheProgramToolStripMenuItem->Name = L"exitTheProgramToolStripMenuItem";
-			this->exitTheProgramToolStripMenuItem->Size = System::Drawing::Size(247, 26);
+			this->exitTheProgramToolStripMenuItem->Size = System::Drawing::Size(224, 26);
 			this->exitTheProgramToolStripMenuItem->Text = L"Exit the program";
 			this->exitTheProgramToolStripMenuItem->Click += gcnew System::EventHandler(this, &CasinoMenu::exitTheProgramToolStripMenuItem_Click);
+			// 
+			// userInfoToolStripMenuItem
+			// 
+			this->userInfoToolStripMenuItem->Name = L"userInfoToolStripMenuItem";
+			this->userInfoToolStripMenuItem->Size = System::Drawing::Size(82, 24);
+			this->userInfoToolStripMenuItem->Text = L"User Info";
+			this->userInfoToolStripMenuItem->Click += gcnew System::EventHandler(this, &CasinoMenu::userInfoToolStripMenuItem_Click);
 			// 
 			// aboutToolStripMenuItem
 			// 
@@ -172,9 +185,9 @@ namespace CasinoWinForms {
 			this->Info_groupBox->Controls->Add(this->Tokens_label);
 			this->Info_groupBox->Controls->Add(this->Cash_label);
 			this->Info_groupBox->Location = System::Drawing::Point(29, 48);
-			this->Info_groupBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->Info_groupBox->Margin = System::Windows::Forms::Padding(4);
 			this->Info_groupBox->Name = L"Info_groupBox";
-			this->Info_groupBox->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->Info_groupBox->Padding = System::Windows::Forms::Padding(4);
 			this->Info_groupBox->Size = System::Drawing::Size(599, 117);
 			this->Info_groupBox->TabIndex = 1;
 			this->Info_groupBox->TabStop = false;
@@ -250,9 +263,9 @@ namespace CasinoWinForms {
 			this->groupBox1->Controls->Add(this->TokensToCash_label);
 			this->groupBox1->Controls->Add(this->CashToTokens_label);
 			this->groupBox1->Location = System::Drawing::Point(29, 181);
-			this->groupBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox1->Margin = System::Windows::Forms::Padding(4);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox1->Padding = System::Windows::Forms::Padding(4);
 			this->groupBox1->Size = System::Drawing::Size(599, 158);
 			this->groupBox1->TabIndex = 2;
 			this->groupBox1->TabStop = false;
@@ -261,7 +274,7 @@ namespace CasinoWinForms {
 			// TokensToCash_textBox
 			// 
 			this->TokensToCash_textBox->Location = System::Drawing::Point(237, 100);
-			this->TokensToCash_textBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->TokensToCash_textBox->Margin = System::Windows::Forms::Padding(4);
 			this->TokensToCash_textBox->Name = L"TokensToCash_textBox";
 			this->TokensToCash_textBox->Size = System::Drawing::Size(181, 22);
 			this->TokensToCash_textBox->TabIndex = 5;
@@ -270,7 +283,7 @@ namespace CasinoWinForms {
 			// CashToTokens_textBox
 			// 
 			this->CashToTokens_textBox->Location = System::Drawing::Point(237, 42);
-			this->CashToTokens_textBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->CashToTokens_textBox->Margin = System::Windows::Forms::Padding(4);
 			this->CashToTokens_textBox->Name = L"CashToTokens_textBox";
 			this->CashToTokens_textBox->Size = System::Drawing::Size(181, 22);
 			this->CashToTokens_textBox->TabIndex = 4;
@@ -279,7 +292,7 @@ namespace CasinoWinForms {
 			// TokensToCash_button
 			// 
 			this->TokensToCash_button->Location = System::Drawing::Point(448, 94);
-			this->TokensToCash_button->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->TokensToCash_button->Margin = System::Windows::Forms::Padding(4);
 			this->TokensToCash_button->Name = L"TokensToCash_button";
 			this->TokensToCash_button->Size = System::Drawing::Size(143, 36);
 			this->TokensToCash_button->TabIndex = 3;
@@ -290,7 +303,7 @@ namespace CasinoWinForms {
 			// CashToTokens_button
 			// 
 			this->CashToTokens_button->Location = System::Drawing::Point(448, 36);
-			this->CashToTokens_button->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->CashToTokens_button->Margin = System::Windows::Forms::Padding(4);
 			this->CashToTokens_button->Name = L"CashToTokens_button";
 			this->CashToTokens_button->Size = System::Drawing::Size(143, 36);
 			this->CashToTokens_button->TabIndex = 2;
@@ -335,9 +348,9 @@ namespace CasinoWinForms {
 			this->Roulette_groupBox->Controls->Add(this->Bet_textBox);
 			this->Roulette_groupBox->Controls->Add(this->Bet_label);
 			this->Roulette_groupBox->Location = System::Drawing::Point(29, 352);
-			this->Roulette_groupBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->Roulette_groupBox->Margin = System::Windows::Forms::Padding(4);
 			this->Roulette_groupBox->Name = L"Roulette_groupBox";
-			this->Roulette_groupBox->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->Roulette_groupBox->Padding = System::Windows::Forms::Padding(4);
 			this->Roulette_groupBox->Size = System::Drawing::Size(597, 207);
 			this->Roulette_groupBox->TabIndex = 3;
 			this->Roulette_groupBox->TabStop = false;
@@ -372,7 +385,7 @@ namespace CasinoWinForms {
 			this->Bet_button->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->Bet_button->Location = System::Drawing::Point(19, 159);
-			this->Bet_button->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->Bet_button->Margin = System::Windows::Forms::Padding(4);
 			this->Bet_button->Name = L"Bet_button";
 			this->Bet_button->Size = System::Drawing::Size(241, 42);
 			this->Bet_button->TabIndex = 10;
@@ -384,7 +397,7 @@ namespace CasinoWinForms {
 			// 
 			this->Green_radioButton->AutoSize = true;
 			this->Green_radioButton->Location = System::Drawing::Point(219, 130);
-			this->Green_radioButton->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->Green_radioButton->Margin = System::Windows::Forms::Padding(4);
 			this->Green_radioButton->Name = L"Green_radioButton";
 			this->Green_radioButton->Size = System::Drawing::Size(104, 20);
 			this->Green_radioButton->TabIndex = 9;
@@ -396,7 +409,7 @@ namespace CasinoWinForms {
 			// 
 			this->Black_radioButton->AutoSize = true;
 			this->Black_radioButton->Location = System::Drawing::Point(19, 130);
-			this->Black_radioButton->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->Black_radioButton->Margin = System::Windows::Forms::Padding(4);
 			this->Black_radioButton->Name = L"Black_radioButton";
 			this->Black_radioButton->Size = System::Drawing::Size(91, 20);
 			this->Black_radioButton->TabIndex = 8;
@@ -408,7 +421,7 @@ namespace CasinoWinForms {
 			// 
 			this->Red_radioButton->AutoSize = true;
 			this->Red_radioButton->Location = System::Drawing::Point(128, 130);
-			this->Red_radioButton->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->Red_radioButton->Margin = System::Windows::Forms::Padding(4);
 			this->Red_radioButton->Name = L"Red_radioButton";
 			this->Red_radioButton->Size = System::Drawing::Size(75, 20);
 			this->Red_radioButton->TabIndex = 8;
@@ -431,7 +444,7 @@ namespace CasinoWinForms {
 			// Bet_textBox
 			// 
 			this->Bet_textBox->Location = System::Drawing::Point(19, 63);
-			this->Bet_textBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->Bet_textBox->Margin = System::Windows::Forms::Padding(4);
 			this->Bet_textBox->Name = L"Bet_textBox";
 			this->Bet_textBox->Size = System::Drawing::Size(181, 22);
 			this->Bet_textBox->TabIndex = 6;
@@ -460,7 +473,7 @@ namespace CasinoWinForms {
 			this->Controls->Add(this->menuStrip1);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::Fixed3D;
 			this->MainMenuStrip = this->menuStrip1;
-			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->MaximizeBox = false;
 			this->Name = L"CasinoMenu";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
@@ -479,13 +492,14 @@ namespace CasinoWinForms {
 
 		}
 #pragma endregion
-	private: System::Void aboutToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {MessageBox::Show(this, "BLACK GUN CASINO\nDETAILS: https://github.com/Zeerhiy/Casino-Project\n(c) SIGMAS", "Info", MessageBoxButtons::OK, MessageBoxIcon::Information);}
+void UpdateInfo();
 private: System::Void exitTheProgramToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {Application::Exit();}
-private: System::Void backToTheGuestMenuToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void backToTheMainMenuToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void CasinoMenu_Load(System::Object^ sender, System::EventArgs^ e);
 private: System::Void CashToTokens_button_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void TokensToCash_button_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void Bet_button_Click(System::Object^ sender, System::EventArgs^ e);
-	   void UpdateInfo();
+private: System::Void aboutToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) { MessageBox::Show(this, "BLACK GUN CASINO\nDETAILS: https://github.com/Zeerhiy/Casino-Project\n(c) SIGMAS", "Info", MessageBoxButtons::OK, MessageBoxIcon::Information); }
+private: System::Void userInfoToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }
