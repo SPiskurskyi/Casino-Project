@@ -20,11 +20,11 @@ System::Void CasinoWinForms::LogInF::LogIn_button_Click(System::Object^ sender, 
 		return;
 	}
 
-	if (ValidateEmail(email, DataOutput) && ValidatePassword(password, DataOutput)) {
+	if (ValidateEmail(email) && ValidatePassword(password)) {
 		
 		guest.SetGuestEmail(email);
 		guest.SetGuestPassword(password);
-		GuestF^ form = gcnew GuestF();
+		CasinoMenu^ form = gcnew CasinoMenu();
 		this->Hide();
 		form->Show();
 	}
